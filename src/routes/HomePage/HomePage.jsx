@@ -1,8 +1,11 @@
 import React from "react";
+import  defaultpage from '../.././assets/de.jpeg'
 
 function HomePage() {
     return (
-        <div>Добро пожаловать в каталог фильмов</div>
+        <div className="default_page">
+            
+        </div>
     )
 }
 

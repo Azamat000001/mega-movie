@@ -64,11 +64,12 @@ function App () {
   return (
     <div className="app">
       <Navbar/>
-      
-      <Routes>
-        <Route path="/home" element={ <HomePage/> } />
-        <Route path="/movies" element={ <MovieContainer/> } />
-      </Routes>
+      <div className="content">
+        <Routes>
+          <Route path="/home" element={ <HomePage/> } />
+          <Route path="/movies" element={ <MovieContainer/> } />
+        </Routes>
+      </div>
     </div>
   )
 }
