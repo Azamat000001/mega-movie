@@ -1,0 +1,18 @@
+.nav {
+    background-color:chocolate;
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .item a {
+    color: white;
+    text-decoration:none;
+    margin: 5px 5px 5px 5px;
+  }
+
+  .item a:active {
+    color: rgb(58, 58, 149);
+  }
+  
+ 

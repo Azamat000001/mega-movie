@@ -1,0 +1,52 @@
+.movies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    padding-top: 70px;
+    width: 100%;
+}
+
+.movies .movie {
+    display: flex;
+    width: 30%;
+    background-color: white;
+    align-items: flex-start;
+    margin-bottom: 70px;
+    justify-content: space-between;
+    font-weight: 300;
+    padding: 20px;
+    border-radius: 15px;
+    color: #adaeb9;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+       0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+
+
+.loader {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 10rem;
+    height: 10rem;
+    border-top: 1rem solid #0077ff;
+    border-right: 1rem solid transparent;
+    border-radius: 50%;
+    margin: auto;
+    animation: spinner 0.4s linear infinite;
+}
+
+
+
+@keyframes spinner {
+    100% {
+        transform: rotate(360deg);
+        transition: 0.4s all ease;
+    }
+}
