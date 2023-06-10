@@ -36,7 +36,7 @@ const SignIn = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit"><NavLink to="/movies">Log In</NavLink></button>
+        <button type="submit">Log In</button>
       </form>
       <div className="offerToRegistor">
         <p>if you didn't log in,you may</p>
