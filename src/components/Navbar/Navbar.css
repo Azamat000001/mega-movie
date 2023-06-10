@@ -1,18 +1,32 @@
 .nav {
-    background-color:chocolate;
     padding:20px;
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+
+    
+
+  }
+
+  .ava {
+    padding: 5px;
+    color: rgb(199, 9, 9);
+    font-family: 'Netflix Font';    
+    font-size: 35px;    
+    background-color: aliceblue;
+    border-radius: 10px;    
+    margin: 10px;                                
   }
   
   .item a {
-    color: white;
+    color: rgb(199, 9, 9);
+    font-size: 20px ;
     text-decoration:none;
-    margin: 5px 5px 5px 5px;
+    margin: 50px 0 0 0; 
   }
 
   .item a:active {
     color: rgb(58, 58, 149);
+    font-size: 35px ;
   }
   
  

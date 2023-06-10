@@ -1,5 +1,5 @@
 import React from "react";
-import  defaultpage from '../.././assets/de.jpeg'
+import "./HomePage.css"
 
 function HomePage() {
     return (

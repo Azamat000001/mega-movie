@@ -1,12 +1,12 @@
 
  
- img {
-    height: 100%;
-    width: 100%; 
-}
+
 
 .default_page {
-    height: 100vh;
-    width: 100vh;
-    background-image: url(../../assets/defaultpage.jpeg);
+    height: 100%;
+    width: 100%;
+    background-image: url(https://freequizgames.com/wp-content/uploads/2022/03/which-netflix-movie-are-you-1024x576.jpg);
+    position: relative;
+    overflow: hidden;
+    padding: 0;
 }

@@ -1,6 +1,9 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../../firebase/firebase-config";
+import AuthDetails from "../../AuthDetails/AuthDetails";
+import { NavLink } from "react-router-dom";
+import "./LogIn.css"
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -33,8 +36,13 @@ const SignIn = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit">Log In</button>
+        <button type="submit"><NavLink to="/movies">Log In</NavLink></button>
       </form>
+      <div className="offerToRegistor">
+        <p>if you didn't log in,you may</p>
+        <h4><NavLink to="/SignUp">Sign up</NavLink></h4>
+      </div>
+      
     </div>
   );
 };

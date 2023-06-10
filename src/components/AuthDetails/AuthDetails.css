@@ -1,0 +1,5 @@
+.signed_in {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+}

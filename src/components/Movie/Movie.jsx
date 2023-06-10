@@ -1,14 +1,13 @@
 import React from "react";
-import { useState } from "react";
 import PropTypes from "prop-types";
 import "./Movie.css";
+import { useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
-import SearchingMovie from "../SearchingMovie/SearchingMovie";
+import SearchingMovie from "../../routes/SearchingMovie/SearchingMovie";
 
 
-const Movie = ({ year, title, summary, poster, genres, ...props }) => {
-    const [ isOpenMovie, setIsOpenMovie ] = useState(false)
-    const [ isLoading, setIsLoading ] = useState(false)
+const Movie = ({ key, year, title, summary, poster, genres, ...props }) => {
+    const [ likeCount, setLikeCount ] = useState(0)
     return (
        
             <div>
@@ -24,8 +23,9 @@ const Movie = ({ year, title, summary, poster, genres, ...props }) => {
                         })}
                     </ul>
                  
-                
+                <div><NavLink to={`/movies/about:${key}`}>About</NavLink></div>
                 </div>  
+      
             </div>
         
     
