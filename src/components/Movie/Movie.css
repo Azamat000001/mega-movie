@@ -1,4 +1,26 @@
+.reiting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 10% 0 20%;
+}
 
+.reating__item {
+    font-size: 3rem;
+}
+
+.reating__item:hover,
+.reating__item:hover ~ .reating__item {
+    color: #787878;
+}
+
+.reiting[data-total-value="5"] .reating__item:nth-child(n + 1),
+.reiting[data-total-value="4"] .reating__item:nth-child(n + 2),
+.reiting[data-total-value="3"] .reating__item:nth-child(n + 3),
+.reiting[data-total-value="2"] .reating__item:nth-child(n + 4),
+.reiting[data-total-value="1"] .reating__item:nth-child(n + 5){
+    color: red;
+}
 
 img {
     border-radius: 10px; 
@@ -34,6 +56,7 @@ img {
 .movie .movie__column {
     width: 80%;
 }
+
 
 /* .filmAbout {
     color: rgba(47, 0, 255, 0.9);

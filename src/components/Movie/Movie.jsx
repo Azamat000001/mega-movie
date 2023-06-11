@@ -7,7 +7,15 @@ import SearchingMovie from "../../routes/SearchingMovie/SearchingMovie";
 
 
 const Movie = ({ key, year, title, summary, poster, genres, ...props }) => {
-    const [ likeCount, setLikeCount ] = useState(0)
+    const [ likeCount, setLikeCount ] = useState(0);
+    const reitingItemList = document.querySelectorAll(".reating__item");
+    const reitingItemArrey = Array.prototype.slice.call(reitingItemList);
+
+    reitingItemArrey.forEach(item => 
+        item.addEventListener('click', () => 
+            item.parentNode.dataset.totalValue = item.dataset.itemValue
+        )
+    );
     return (
        
             <div>
@@ -22,6 +30,13 @@ const Movie = ({ key, year, title, summary, poster, genres, ...props }) => {
                             return <li key={index} className="genres__genre">{genre}</li>
                         })}
                     </ul>
+                    <div className="reiting" data-total-value="1">
+                        <div className="reating__item" data-item-value="5">♥</div>
+                        <div className="reating__item" data-item-value="4">♥</div>
+                        <div className="reating__item" data-item-value="3">♥</div>
+                        <div className="reating__item" data-item-value="2">♥</div>
+                        <div className="reating__item" data-item-value="1">♥</div>
+                    </div>
                  
                 <div><NavLink to={`/movies/about:${key}`}>About</NavLink></div>
                 </div>  

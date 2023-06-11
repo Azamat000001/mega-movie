@@ -1,9 +1,9 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import { auth } from "../../../firebase/firebase-config";
+import { auth } from "../../../firebase/firebase_config";
 import AuthDetails from "../../AuthDetails/AuthDetails";
 import { NavLink } from "react-router-dom";
-import "./LogIn.css"
+import "./SignIn.css"
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -41,6 +41,7 @@ const SignIn = () => {
       <div className="offerToRegistor">
         <p>if you didn't log in,you may</p>
         <h4><NavLink to="/SignUp">Sign up</NavLink></h4>
+        
       </div>
       
     </div>

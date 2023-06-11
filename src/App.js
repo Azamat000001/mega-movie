@@ -9,8 +9,9 @@ import Navbar from "./components/Navbar/Navbar";
 import SignUp from "./components/Auth/SignUp/SignUp";
 
 import React from "react";
-import SignIn from "./components/Auth/LogIn/LogIn";
+import SignIn from "./components/Auth/SignIn/SignIn";
 import { images } from "./assets/images.jpeg"
+
 
 
 
@@ -24,7 +25,7 @@ function App () {
     <div className="app">
       
         <header>
-          <Navbar/>
+          <Navbar/>☼♦☻
         </header>
         <div className="content">
           <Routes>
