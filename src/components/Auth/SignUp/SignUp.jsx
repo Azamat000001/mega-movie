@@ -127,9 +127,9 @@ const SignUp = () => {
   };
 
   return (
-    <div className="sign-in-container">
+    <div className="sign-up-container">
       <form onSubmit={signUp}>
-        <h1>Create Account</h1>
+        <h1>Create your Account</h1>
         <input
           type="email"
           placeholder="Enter your email"

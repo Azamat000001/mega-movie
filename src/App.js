@@ -7,8 +7,9 @@ import MovieContainer from "./routes/MovieContainer/MovieContainer"
 import { Route, Routes, NavLink } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import SignUp from "./components/Auth/SignUp/SignUp";
+import Modal from "./components/Modal/Modal"
 
-import React from "react";
+import React, { useState } from "react";
 import SignIn from "./components/Auth/SignIn/SignIn";
 import { images } from "./assets/images.jpeg"
 
@@ -19,13 +20,17 @@ import { images } from "./assets/images.jpeg"
 
 
 
+
 function App () {
  
+  const [ modalActive, setModalActive ] = useState(true)
+
   return (
     <div className="app">
       
         <header>
-          <Navbar/>☼♦☻
+          <Navbar/>
+          <button className="open-btn" onClick={() => setModalActive(true)}>ОМО</button>
         </header>
         <div className="content">
           <Routes>
@@ -35,8 +40,11 @@ function App () {
             <Route path="/SignIn" element={ <SignIn/> } />
             <Route path="/movies/about" element={ <SearchingMovie/> } />
           </Routes>
+          
+          <Modal active={modalActive} setActive={setModalActive}/>
         </div>
-     
+ 
+  
     </div>
   );
 }

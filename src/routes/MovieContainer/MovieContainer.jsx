@@ -11,6 +11,8 @@ import "./MovieContainer.css";
 
 
 
+
+
 function MovieContainer () {
     const [ isLoading, setIsLoading ] = useState(false)
     const [ movies, setMovies ] = useState([])
@@ -41,6 +43,7 @@ function MovieContainer () {
                 </div> 
                ) : (
                  <div className="movies">
+                  
                   {movies.map((movie) => (
                     <div className="movie">
                     <Movie 

@@ -1,10 +1,15 @@
 import React, { useState} from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import "./Navbar.css"
 import AuthDetails from "../AuthDetails/AuthDetails";
+import Modal from "../Modal/Modal";
+import SignIn from "../Auth/SignIn/SignIn";
+import SignUp from "../Auth/SignUp/SignUp";
 
 function Navbar() {
         const [authUser, setAuthUser] = useState(null);
+        const [ modalActive, setModalActive ] = useState(true)
+        const [ isOpenSign, setIsOpenSign ] = useState()
         return (
         <nav className="nav">
           
@@ -14,9 +19,15 @@ function Navbar() {
                 
                 <div className="item">
                         
-                        <NavLink to="/SignIn">Sign in</NavLink>
+                        <NavLink to="/SignIn"><button className={isOpenSign} onClick={() => setModalActive(true)}>Sign in</button></NavLink>
+                        
+                        
                 </div>
-               
+
+                <Modal active={modalActive} setActive={setModalActive}>
+                        <SignIn/>
+                        <SignUp/>     
+                </Modal>
                 <AuthDetails/>
         
         </nav>
