@@ -1,15 +1,13 @@
 .nav {
-    padding:20px;
+    padding:0px;
     display: flex;
     justify-content: space-around;
-
     
-
   }
 
-  .ava {
+  .ava {  
     padding: 5px;
-    color: rgb(199, 9, 9);
+    color: rgb(0, 57, 245);
     font-family: 'Netflix Font';    
     font-size: 35px;    
     background-color: aliceblue;
@@ -18,7 +16,7 @@
   }
   
   .item a {
-    color: rgb(199, 9, 9);
+    color: rgb(0, 60, 255);
     font-size: 20px ;
     text-decoration:none;
     margin: 50px 0 0 0; 
@@ -27,6 +25,9 @@
   .item a:active {
     color: rgb(58, 58, 149);
     font-size: 35px ;
+  }
+  header{
+    height: 75px;
   }
   
  

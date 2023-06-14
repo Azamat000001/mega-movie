@@ -5,8 +5,10 @@
 .default_page {
     height: 100%;
     width: 100%;
-    background-image: url(https://freequizgames.com/wp-content/uploads/2022/03/which-netflix-movie-are-you-1024x576.jpg);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEVeXl5pszJJAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=);
     position: relative;
     overflow: hidden;
     padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
