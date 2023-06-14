@@ -1,13 +1,15 @@
 .nav {
+  background-color: white;
     padding:0px;
     display: flex;
     justify-content: space-around;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEVeXl5pszJJAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=);
+    /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEVeXl5pszJJAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=); */
   }
 
   .ava {  
     padding: 5px;
-    color: rgb(0, 57, 245);
+    color:  rgb(202, 2, 2);
+    border: 2px solid rgb(202, 2, 2);
     font-family: 'Netflix Font';    
     font-size: 35px;    
     background-color: aliceblue;
@@ -16,10 +18,18 @@
   }
   
   .item a {
-    color: rgb(0, 60, 255);
+    color:  rgb(202, 2, 2);
+    border: 2px solid rgb(202, 2, 2);
     font-size: 20px ;
     text-decoration:none;
-    margin: 50px 0 0 0; 
+    margin: 10px; 
+    border-radius: 10px;   
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .item a:active {

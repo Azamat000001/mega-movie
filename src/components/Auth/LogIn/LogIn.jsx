@@ -23,20 +23,23 @@ const SignIn = () => {
   return (
     <div className="sign-in-container">
       <form onSubmit={signIn}>
-        <h1>Log In to your Account</h1>
+       <div className="form"> <h1>log in</h1>
         <input
+        className="input-form"
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         ></input>
         <input
+          className="input-form"
           type="password"
           placeholder="Enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit"><NavLink to="/movies">Log In</NavLink></button>
+        <button type="submit">Log In</button>
+        </div>
       </form>
       <div className="offerToRegistor">
         <p>if you didn't log in,you may</p>

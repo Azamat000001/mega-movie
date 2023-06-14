@@ -142,7 +142,7 @@ const SignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit"><NavLink to="/movies">Sign Up</NavLink></button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );
