@@ -2,7 +2,7 @@
     padding:0px;
     display: flex;
     justify-content: space-around;
-    
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEVeXl5pszJJAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=);
   }
 
   .ava {  
@@ -27,7 +27,7 @@
     font-size: 35px ;
   }
   header{
-    height: 75px;
+    height: 70px;
   }
   
  
