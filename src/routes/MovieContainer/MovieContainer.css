@@ -1,7 +1,6 @@
 .movies {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
     padding: 50px;
     padding-top: 70px;
@@ -14,7 +13,6 @@
     background-color: white;
     align-items: flex-start;
     margin-bottom: 70px;
-    justify-content: space-between;
     font-weight: 300;
     padding: 20px;
     border-radius: 15px;

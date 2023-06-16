@@ -19,7 +19,7 @@ const Footer = () => {
                     <li className="link-area">
                         <h2>Useful Link</h2>
 
-                        <ul className="box h-box">
+                        <ul className="box">
                             <li><NavLink to="home">Home</NavLink></li>
                             <li><NavLink to="/movies">films</NavLink></li>
                             <li><NavLink to="/SignIn">Sign In</NavLink></li>
@@ -40,11 +40,13 @@ const Footer = () => {
 
                     <li className="link-area">
                         <div className="socials">
-                            <a><i className="fa fa-facebook"></i></a>
-                            <a><i className="fa fa-twitter"></i></a>
-                            <a><i className="fa fa-dribble"></i></a>
-                            <a><i className="fa fa-youtube"></i></a>
-                            <a><i className="fa fa-tumblr"></i></a>
+                            <h2>Us Socials</h2>
+                            <ul>
+                                <li><a href="https://www.instagram.com/asatbekov.26/"><i>Azamat's instagram</i></a></li>
+                                <li><a href="https://www.instagram.com/asatbekov.26/"><i>Yusuf 's instagram</i></a></li>
+                            </ul>
+                            
+                            
                         </div>
                     </li>
                 </ul>
@@ -54,7 +56,6 @@ const Footer = () => {
             
 
             <div className="footer-button">
-                <img src="logo.png" alt="" />
                 <p>All Right reserved by &copy; creativo 2023</p>
             </div>
 

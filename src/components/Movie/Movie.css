@@ -11,14 +11,14 @@
 
 .reating__item:hover,
 .reating__item:hover ~ .reating__item {
-    color: #787878;
+    color: #9b4242;
 }
 
-.reiting[data-total-value="5"] .reating__item:nth-child(1 + n),
-.reiting[data-total-value="4"] .reating__item:nth-child(2 + n),
-.reiting[data-total-value="3"] .reating__item:nth-child(3 + n),
-.reiting[data-total-value="2"] .reating__item:nth-child(4 + n),
-.reiting[data-total-value="1"] .reating__item:nth-child(5 + n){
+.reiting[data-total-value="1"] .reating__item:nth-child(n + 5),
+.reiting[data-total-value="2"] .reating__item:nth-child(n + 4),
+.reiting[data-total-value="3"] .reating__item:nth-child(n + 3),
+.reiting[data-total-value="4"] .reating__item:nth-child(n + 2),
+.reiting[data-total-value="5"] .reating__item:nth-child(n + 1){
     color: red;
 }
 
@@ -36,7 +36,7 @@ img {
 .movie .movie__title {
     margin-bottom: 5px;
     font-size: 24px;
-    color: #2c2c2c;
+    color: darkorange;
 }
 
 .movie .movie__genres {
@@ -44,7 +44,8 @@ img {
     padding: 0;
     margin: 5px 0;
     display: flex;
-    flex-wrap: wrap;
+    text-align:start;
+    justify-content: space-around;
 }
 
 .movie__genres li,

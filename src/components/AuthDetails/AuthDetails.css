@@ -4,6 +4,11 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    color: #fff;
+}
+
+.signed_out {
+    color:#fff
 }
 
 button {

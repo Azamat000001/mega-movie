@@ -36,6 +36,7 @@ main {
     padding: 50px;
     color: #fff;
     background-color: #25242a;
+    border-top: 1px solid #fff;
 }
 
 .footer > * {
@@ -44,6 +45,7 @@ main {
 
 .areas {
     width: 100%;
+    display: inline;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -53,6 +55,7 @@ main {
     /* margin-right: -12em; */
     margin-left: 40px;
     margin-bottom: 40px;
+   
 }
 
 .footer-bottom img {
@@ -99,8 +102,22 @@ h2 {
 }
 
 .box a {
-    color: #999;
+    color: #fff;
+    margin: -40px;
+    padding: -2;
 }
+
+.box {
+    margin: -20px;
+    text-align: center;
+} 
+
+li a:hover {
+    color: grey;
+    font-size: 20px;
+}
+
+
 
 .footer-bottom {
     text-align: center;
@@ -130,8 +147,13 @@ h2 {
 }
 
 .link-area {
-   margin-left: 40px ;
+    margin-top: 0;
+   margin-left: 80px ;
    margin-bottom: 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items:center;
  
 }
 
@@ -140,17 +162,17 @@ h2 {
 }
 
 .socials a {
-    background: darkorange;
+    color: #999;
     width: 40px;
     height: 40px;
     display: inline-block;
     margin-right: 10px;
 }
 
-.socials a i {
+.socials li a {
     color: #e7f2f4;
     padding: 10px 12px;
-    font-size: 20px;
+    width: 100%;
 }
 
 .btn {
@@ -159,6 +181,8 @@ h2 {
     color: #fff;
     padding: 10px 30px;
 }
+
+
 
 .search-box input {
     height: 36px;

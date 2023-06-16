@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./Movie.css";
 import { useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
-import SearchingMovie from "../../routes/SearchingMovie/SearchingMovie";
+// import SearchingMovie from "../../routes/SearchingMovie/SearchingMovie";
 
 
 const Movie = ({ key, year, title, summary, poster, genres, ...props }) => {
@@ -38,7 +38,7 @@ const Movie = ({ key, year, title, summary, poster, genres, ...props }) => {
                         <div className="reating__item" data-item-value="1">♥</div>
                     </div>
                  
-                <div><NavLink to={`/movies/about:${key}`}>About</NavLink></div>
+                
                 </div>  
       
             </div>

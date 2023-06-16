@@ -1,5 +1,5 @@
 import Movie from "./components/Movie/Movie";
-import SearchingMovie from "./routes/SearchingMovie/SearchingMovie";
+// import SearchingMovie from "./routes/SearchingMovie/SearchingMovie";
 import "./App.css";
 import HomePage from "./routes/HomePage/HomePage"
 import MovieContainer from "./routes/MovieContainer/MovieContainer"
@@ -39,15 +39,14 @@ function App () {
             <Route path="/movies" element={ <MovieContainer/> } />
             <Route path="/SignUp" element={ <SignUp/> } />
             <Route path="/SignIn" element={ <SignIn/> } />
-            <Route path="/movies/about" element={ <SearchingMovie/> } />
           </Routes>
           
           
         </div>
         
-        <footer>
+        
           <Footer/>
-        </footer>
+        
     </div>
   );
 }
