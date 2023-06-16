@@ -1,0 +1,167 @@
+/* .Footer {
+    height: ;
+    width: 100vw;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEVeXl5pszJJAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=);
+}
+
+img {
+  
+    height: 50px;
+    border-radius: 20px;
+} */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins;
+    margin: 0;
+    display: grid;
+    font-size: 14px;
+}
+
+main {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9b9b9b;
+    line-height: 3.8;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-direction: row; */
+    padding: 50px;
+    color: #fff;
+    background-color: #25242a;
+}
+
+.footer > * {
+    flex: 1 100%;
+}
+
+.left-area {
+    margin-right: -12em;
+}
+
+.footer-bottom img {
+    width: 15%;
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: darkorange;
+    letter-spacing: 3px;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer li {
+    line-height: 2em;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.right-area {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    /* flex-flow: nowrap; */
+    flex-direction: row;
+}
+
+.right-area > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+.box a {
+    color: #999;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #999;
+    padding-top: 50px;
+}
+
+.left-area p {
+    padding-right: 20%;
+    color: #999;
+}
+
+.socials {
+    margin-top: 2.2em;
+}
+
+.socials a {
+    background: darkorange;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.socials a i {
+    color: #e7f2f4;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+
+.btn {
+    border: none;
+    background: darkorange;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.search-box input {
+    height: 36px;
+}
+
+@media screen and (min-width: 600px) {
+    .right-area > * {
+        flex: 1;
+    }
+
+    .left-area {
+        flex: 1 0px;
+    }
+
+    .right-area {
+        flex: 2 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 15px;
+
+    }
+
+    .main {
+        font-size: 55px;
+    }
+}

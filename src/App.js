@@ -12,6 +12,7 @@ import Modal from "./components/Modal/Modal"
 import React, { useState } from "react";
 import SignIn from "./components/Auth/SignIn/SignIn";
 import { images } from "./assets/images.jpeg"
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -43,8 +44,10 @@ function App () {
           
           <Modal active={modalActive} setActive={setModalActive}/>
         </div>
- 
-  
+        
+        <footer>
+          <Footer/>
+        </footer>
     </div>
   );
 }

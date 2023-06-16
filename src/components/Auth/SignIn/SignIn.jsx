@@ -43,7 +43,7 @@ const SignIn = () => {
         </form>
         <div className="offerToRegistor">
           <p>if you didn't log in,you may</p>
-          
+          <h4><NavLink to="/SignUp">Sign up</NavLink></h4>
         
         </div>
       </div>
