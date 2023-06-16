@@ -1,10 +1,5 @@
-button {
-    margin: 0 42% 0 42%;
-}
 
 .offerToRegistor {
-    display: flex;
-    flex-direction: row;
     text-decoration: none;
 };
 
@@ -60,16 +55,28 @@ h4 a {
     border: 1px solid #0fc3f5;
 } */
 .sign-in-container button{
-    margin-top: 20px;
+    margin-top: 30px;
 	color: #fff;
-	font-weight: bold;
-	text-transform: uppercase;
+    margin-left: 380px;
 	border: none;
-	background: #0fc3f5;
 	transition: .3s;
     background: #4442db;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-
+    border-radius: 15px;
+	height: 38px;
+	text-align: center;
+	width: 20%;
+	margin-right: 10px;
+	text-align: center;
+}
+.input-form{
+	border-radius: 1px solid;
+}
+.content{
+	width: 0px;
+	height: ;
+}
+.php{
+	text-align: center;
+	color: #fff;
+	font-size: large ;
 }
