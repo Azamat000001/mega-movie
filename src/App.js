@@ -31,7 +31,7 @@ function App () {
       
         <header>
           <Navbar/>
-          <button className="open-btn" onClick={() => setModalActive(true)}>ОМО</button>
+          
         </header>
         <div className="content">
           <Routes>
@@ -42,7 +42,7 @@ function App () {
             <Route path="/movies/about" element={ <SearchingMovie/> } />
           </Routes>
           
-          <Modal active={modalActive} setActive={setModalActive}/>
+          
         </div>
         
         <footer>

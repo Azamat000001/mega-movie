@@ -5,7 +5,7 @@ import AuthDetails from "../../AuthDetails/AuthDetails";
 import { NavLink } from "react-router-dom";
 import "./SignIn.css"
 import SignUp from "../SignUp/SignUp";
-import Modal from "../../Modal/Modal";
+
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -23,32 +23,32 @@ const SignIn = () => {
   };
 
   return (
-    <div>
-      <div className="sign-in-container">
-        <form onSubmit={signIn}>
-          <h1>Log In to your Account</h1>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></input>
-          <button type="submit">Log In</button>
-        </form>
-        <div className="offerToRegistor">
-          <p>if you didn't log in,you may</p>
-          <h4><NavLink to="/SignUp">Sign up</NavLink></h4>
-        
+    <div className="sign-in-container">
+      <form onSubmit={signIn}>
+       <div className="form"> <h1>log in</h1>
+        <input
+        className="input-form"
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        ></input>
+        <input
+          className="input-form"
+          type="password"
+          placeholder="Enter your password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        ></input>
+        <button type="submit">Log In</button>
         </div>
+      </form>
+      <div className="offerToRegistor">
+        <p className="php">if you didn't log in,you may</p>
+        <h3 className="buttsign"><i><NavLink to="/SignUp">Sign up</NavLink></i></h3>
       </div>
+      
     </div>
-    
   );
 };
 

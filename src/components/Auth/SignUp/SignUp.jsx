@@ -127,22 +127,26 @@ const SignUp = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <div className="sign-in-container">
       <form onSubmit={signUp}>
-        <h1>Create your Account</h1>
-        <input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
-        <input
-          type="password"
-          placeholder="Enter your password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <button type="submit">Sign Up</button>
+        <div className="form">
+          <h1>Create your Account</h1>
+          <input
+          className="input-form"
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          ></input>
+          <input
+            className="input-form"
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          ></input>
+          <button type="submit">Sign Up</button>
+        </div>
       </form>
     </div>
   );

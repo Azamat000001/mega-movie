@@ -26,15 +26,15 @@
 
 
 .loader {
-  
+    margin-top: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .spinner {
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
     border-top: 1rem solid #0077ff;
     border-right: 1rem solid transparent;
     border-radius: 50%;

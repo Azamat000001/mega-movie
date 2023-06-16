@@ -2,30 +2,36 @@
     padding:0px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEVeXl5pszJJAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=);
   }
 
   .ava {  
     padding: 5px;
-    color: rgb(0, 57, 245);
+    color: darkorange;
     font-family: 'Netflix Font';    
     font-size: 35px;    
-    background-color: aliceblue;
     border-radius: 10px;    
     margin: 10px;                                
   }
   
   .item a {
-    color: rgb(0, 60, 255);
+    color: darkorange;
     font-size: 20px ;
     text-decoration:none;
     margin: 50px 0 0 0; 
   }
 
   .item a:active {
-    color: rgb(58, 58, 149);
+    color: darkred;
     font-size: 25px ;
   }
+
+  .item a:hover {
+    color: darkred;
+    font-size: 25px ;
+  }
+
   header{
     height: 70px;
   }
