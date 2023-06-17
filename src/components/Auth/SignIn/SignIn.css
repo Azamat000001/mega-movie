@@ -29,7 +29,7 @@ h3 i a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 40%;
+    width: calc(40%, 5px);
 }
 .sign-in-container h1{
     margin: 30px 100px;
@@ -82,4 +82,11 @@ h3 i a {
  text-align: center;
  color: #fff;
  font-size: large ;
+}
+
+@media screen and (max-width: 600px) {
+    .sign-in-container {
+        width: 300px;
+        margin: 200px 150px 300px 150px;
+    }
 }
