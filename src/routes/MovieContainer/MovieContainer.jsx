@@ -19,9 +19,7 @@ function MovieContainer () {
   
     const getMovies = async () => { 
       setIsLoading(true)
-      // const { data: { data: { movies }}} = await axios.get('https://yts.mx/api/v2/list_movies.json?sort_by=rating'); 
       const data = await axios.get('https://yts.mx/api/v2/list_movies.json?sort_by=rating');
-      // const data = await axios.get('https://yts.mx/api/v2/list_movies.json')
       console.log(data.data.data.movies); 
       setMovies(data.data.data.movies)
       setIsLoading(false) 
@@ -33,7 +31,7 @@ function MovieContainer () {
     }, [])
 
     
-    return (<> 
+    return (<div> 
             <section className="container">
               { isLoading ? (
                 <div className="loader">
@@ -61,15 +59,9 @@ function MovieContainer () {
                   ))}
                 </div>
               )}
-              {/* <Routes>
-                <Route path={`/movies/${props.id}`}/>
-              </Routes> */}
+            
             </section>
-                    {/* <Routes> 
-                      <Route path="/film" element={<App/>}/> 
-                      <Route path="/film/:name" element={<SearchingMovie/>}></Route>
-                    </Routes> */}
-               </>
+               </div>
           );
   }
   

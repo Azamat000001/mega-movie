@@ -7,7 +7,6 @@ import MovieContainer from "./routes/MovieContainer/MovieContainer"
 import { Route, Routes, NavLink } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import SignUp from "./components/Auth/SignUp/SignUp";
-import Modal from "./components/Modal/Modal"
 
 import React, { useState } from "react";
 import SignIn from "./components/Auth/SignIn/SignIn";
