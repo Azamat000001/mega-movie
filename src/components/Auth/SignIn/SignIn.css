@@ -1,0 +1,92 @@
+.offerToRegistor {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    margin: 25%; 
+};
+
+h3 i a {
+    text-decoration: none;
+    color: darkorange;
+};
+
+.form{
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3) ) ;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10%;
+}
+.sign-in-container{
+    margin-top: 100px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: calc(40%, 5px);
+}
+.sign-in-container h1{
+    margin: 30px 100px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 15px 40px;
+    text-align: center;
+}
+.sign-in-container input{
+    padding: 10px;
+    width: 90%;
+    color: #fff;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border: 1px solid #fff;
+    text-align: center;
+
+
+}
+
+.sign-in-container button{
+    margin-top: 30px;
+    color: #fff;
+    margin-left: 40%;
+    border: none;
+    transition: .3s;
+    background: darkorange;
+    border-radius: 15px;
+    height: 38px;
+    text-align: center;
+    width: 20%;
+    margin-right: 10px;
+    text-align: center;
+}
+.input-form {
+ border-radius: 20px;
+ margin:15px ;
+
+}
+.content{
+ width: 100%;
+ /* height: 100vh; */
+ 
+}
+.php{
+ text-align: center;
+ color: #fff;
+ font-size: large ;
+}
+
+@media screen and (max-width: 600px) {
+    .sign-in-container {
+        width: 300px;
+        margin: 200px 150px 300px 150px;
+    }
+}

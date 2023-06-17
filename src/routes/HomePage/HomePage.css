@@ -1,0 +1,25 @@
+
+ 
+
+
+.default_page {
+    height: 100%;
+    width: 100%;
+    /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEVeXl5pszJJAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=); */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+
+
+li{
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
