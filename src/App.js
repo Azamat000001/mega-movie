@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import SignIn from "./components/Auth/SignIn/SignIn";
 import { images } from "./assets/images.jpeg"
 import Footer from "./components/Footer/Footer";
+import DevsMovieContainer from "./routes/DevsMovieContainer/DevsMovieContainer";
 
 
 
@@ -36,6 +37,7 @@ function App () {
           <Routes>
             <Route path="/home" element={ <HomePage/> } />
             <Route path="/movies" element={ <MovieContainer/> } />
+            <Route path="/recommendationMovie" element={ <DevsMovieContainer/> }/>
             <Route path="/SignUp" element={ <SignUp/> } />
             <Route path="/SignIn" element={ <SignIn/> } />
           </Routes>

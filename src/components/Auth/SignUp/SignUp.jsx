@@ -114,10 +114,12 @@ import { NavLink } from "react-router-dom";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [displayName, setDisplayName] = useState("")
+  console.log(auth)
 
   const signUp = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password, displayName)
       .then((userCredential) => {
         console.log(userCredential);
       })
@@ -132,11 +134,18 @@ const SignUp = () => {
         <div className="form">
           <h1>Create your Account</h1>
           <input
-          className="input-form"
+            className="input-form"
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+          ></input>
+          <input
+            className="input-form"
+            type="name"
+            placeholder="Enter your Name"
+            value={displayName}
+            onChange={(e) => setDisplayName(e.target.value)}
           ></input>
           <input
             className="input-form"

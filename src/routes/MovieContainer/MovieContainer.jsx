@@ -52,6 +52,7 @@ function MovieContainer () {
                       summary={movie.summary} 
                       poster={movie.medium_cover_image}
                       genres={movie.genres}
+                      rating={movie.rating}
                     />
                     </div>
                     

@@ -10,7 +10,7 @@ function Navbar() {
         return (
         <nav className="nav">
           
-                <h1 className="item ava">Mega-Team's Movie</h1>
+                <h1 className="item ava">Megamovie</h1>
                 <div className="item"><NavLink to="/home" >Home</NavLink></div>
                 <div className="item"><NavLink to="movies" >Films</NavLink></div>
                 <div className="item">

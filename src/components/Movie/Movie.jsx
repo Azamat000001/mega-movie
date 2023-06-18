@@ -6,8 +6,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 // import SearchingMovie from "../../routes/SearchingMovie/SearchingMovie";
 
 
-const Movie = ({ key, year, title, summary, poster, genres, ...props }) => {
-    const [ likeCount, setLikeCount ] = useState(0);
+const Movie = ({ key, year, title, summary, poster, genres, rating, ...props }) => {
     const reitingItemList = document.querySelectorAll(".reating__item");
     const reitingItemArrey = Array.prototype.slice.call(reitingItemList);
 
@@ -30,6 +29,7 @@ const Movie = ({ key, year, title, summary, poster, genres, ...props }) => {
                             return <li key={index} className="genres__genre">{genre}</li>
                         })}
                     </ul>
+                    <div className="movie__rating">The film is rated <span>{rating}</span> points</div>
                     <div className="reiting" data-total-value="1">
                         <div className="reating__item" data-item-value="5">♥</div>
                         <div className="reating__item" data-item-value="4">♥</div>
@@ -51,6 +51,7 @@ const Movie = ({ key, year, title, summary, poster, genres, ...props }) => {
 Movie.propTypes = {
     id: PropTypes.number.isRequired,
     year: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
     poster: PropTypes.string.isRequired,
