@@ -1,4 +1,5 @@
 import React from 'react';
+import './DevsMovie.css'
 import PropTypes from 'prop-types'
 import { 
     collection, 

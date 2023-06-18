@@ -1,5 +1,6 @@
 import { db } from '../../firebase/firebase_config';
 import React, { useEffect, useState } from "react";
+import './DevsMovieContainer.css'
 import { 
         collection, 
         getDocs, 
@@ -11,6 +12,8 @@ import {
 import DevsMovie from '../../components/DevsMovie/DevsMovie';
 
 const DevsMovieContainer = () => {
+  const [ isLoading, setIsLoading ] = useState(false)
+
   const [ newTitle, setNewTitle ] = useState("")
   const [ newYear, setNewYear] = useState(0)
   const [ newGenres, setNewGenres ] = useState("")
@@ -30,8 +33,10 @@ const DevsMovieContainer = () => {
   
     useEffect(() => {
       const getDevsMovies = async () => {
+        setIsLoading(true);
         const data = await getDocs(devsMoviesCollectionRef);
         setDevsMovies(devsMoviesCollectionRef.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        setIsLoading(false)
       }
 
       getDevsMovies()
@@ -39,6 +44,7 @@ const DevsMovieContainer = () => {
 
   return (
     <div className="app">
+     <div>
 
       <input 
         placeholder="Title..." 
@@ -79,19 +85,28 @@ const DevsMovieContainer = () => {
         }}
       />
       <button onClick={createDevsMovie}>Create Movie</button>
-      {devsMovies.map((devsMovie) => {
-        return (
-          <DevsMovie
-           id={devsMovie.id}
-           poster={devsMovie.poster} 
-           title={devsMovie.title}
-           year={devsMovie.year}
-           genres={devsMovie.genres}
-           rating={devsMovie.rating}
-           summary={devsMovie.summary}
-          />
-        ); 
-      })}
+   </div>
+      {isLoading ? (
+        <div className="loader">
+          <div className="spinner"></div>
+        </div> 
+      ) : (
+        <div className="movie">
+          {devsMovies.map((devsMovie) => {
+            return (
+              <DevsMovie
+                id={devsMovie.id}
+                poster={devsMovie.poster} 
+                title={devsMovie.title}
+                year={devsMovie.year}
+                genres={devsMovie.genres}
+                rating={devsMovie.rating}
+                summary={devsMovie.summary}
+              />
+            ); 
+          })}
+        </div>
+      )}
 
       
     </div>
