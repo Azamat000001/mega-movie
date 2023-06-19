@@ -1,8 +1,13 @@
+.movie__card {
+    width: 100%;
+}
+
+
 .reiting {
+    width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0 10% 0 20%;
 }
 
 .reating__item {
@@ -14,11 +19,8 @@
     color: #9b4242;
 }
 
-.reiting[data-total-value="1"] .reating__item:nth-child(n + 5),
-.reiting[data-total-value="2"] .reating__item:nth-child(n + 4),
-.reiting[data-total-value="3"] .reating__item:nth-child(n + 3),
-.reiting[data-total-value="4"] .reating__item:nth-child(n + 2),
-.reiting[data-total-value="5"] .reating__item:nth-child(n + 1){
+
+.reiting[data-total-value="1"] .reating__item:nth-child(n + 1){
     color: red;
 }
 
@@ -39,11 +41,27 @@ img {
     color: darkorange;
 }
 
+.movie .movie__about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.movie .movie__summary {
+    width: 100%;
+}
+
+.movie .movie__year {
+    height: 10px;
+}
+
 .movie .movie__genres {
+    height: 50px;
     list-style:none ;
     padding: 0;
-    margin: 5px 0;
+    margin: 50px ;
     display: flex;
+    flex-wrap: wrap;
     text-align:start;
     justify-content: space-around;
 }
@@ -52,10 +70,58 @@ img {
 .movie .movie__year {
     font-size: 14px;
     margin-right: 10px ;
+    margin: 0;
+    height: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.all__rating {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.movie .movie__rating {
+    height: 40px;
+    width: 70%;
+    background-color:  rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: darkorange;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.movie .movie__rating h3 {
+    margin: 10px;
+}
+
+.rating {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+
+.rating h2 {
+    color: white;
+}
+
+
+
+
 
 .movie .movie__column {
     width: 80%;
+    align-items: center;
+    text-align: center;
+    margin: 0 15px;
 }
 
 

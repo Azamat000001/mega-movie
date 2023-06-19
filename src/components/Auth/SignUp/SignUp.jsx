@@ -115,11 +115,11 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("")
-  console.log(auth)
+  // console.log(auth)
 
   const signUp = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password, displayName)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
       })
@@ -142,13 +142,6 @@ const SignUp = () => {
           ></input>
           <input
             className="input-form"
-            type="name"
-            placeholder="Enter your Name"
-            value={displayName}
-            onChange={(e) => setDisplayName(e.target.value)}
-          ></input>
-          <input
-            className="input-form"
             type="password"
             placeholder="Enter your password"
             value={password}
@@ -157,6 +150,10 @@ const SignUp = () => {
           <button type="submit">Sign Up</button>
         </div>
       </form>
+      <div className="offerToRegistor">
+        <p className="php">Already have an accaunt?</p>
+        <h3 className="buttsign"><i><NavLink to="/SignIn">Log in</NavLink></i></h3>
+      </div>
     </div>
   );
 };

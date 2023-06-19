@@ -10,8 +10,11 @@ h3 i a {
     color: darkorange;
 };
 
+form {
+    height: 100%;
+}
+
 .form{
-    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3) ) ;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -19,17 +22,19 @@ h3 i a {
     margin: 10%;
 }
 .sign-in-container{
-    margin-top: 100px;
-    height: 700px;
+    margin: 100px 0;
+    height: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: rgba(0,0,0,.7);
+    background: rgba(0,0,0, 0.7);
+    border: 2px solid grey;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: calc(40%, 5px);
+    width: 50%;
 }
 .sign-in-container h1{
     margin: 30px 100px;

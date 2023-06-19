@@ -6,7 +6,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 // import SearchingMovie from "../../routes/SearchingMovie/SearchingMovie";
 
 
-const Movie = ({ key, year, title, summary, poster, genres, rating, ...props }) => {
+const Movie = ({ key, year, title, summary, poster, genres, rating, language, runtime, ...props }) => {
     const reitingItemList = document.querySelectorAll(".reating__item");
     const reitingItemArrey = Array.prototype.slice.call(reitingItemList);
 
@@ -17,26 +17,36 @@ const Movie = ({ key, year, title, summary, poster, genres, rating, ...props }) 
     );
     return (
        
-            <div>
+            <div className="movie__card">
           
                 <img src={poster} alt={title} title={title} />
+
                 <div className="movie__column">
-                    <h3 className="movie__title">{ title }</h3>
-                    <h5 className="movie__year">{ year }</h5>
-                    <p className="movie__summary">{summary.slice(0, 140)}</p>
+                    <h2 className="movie__title">{ title }</h2>
+                    <div className="movie__about">
+                        <p className="movie__year">{ year }</p>
+                        <p className="movie__language">{ language }</p>
+                    </div>
+                    
+                   
+                    
                     <ul className="movie__genres">
                         {genres.map((genre, index) => {
-                            return <li key={index} className="genres__genre">{genre}</li>
+                            return <li key={index} >{genres.slice(0, 1)}</li>
                         })}
                     </ul>
-                    <div className="movie__rating">The film is rated <span>{rating}</span> points</div>
-                    <div className="reiting" data-total-value="1">
-                        <div className="reating__item" data-item-value="5">♥</div>
-                        <div className="reating__item" data-item-value="4">♥</div>
-                        <div className="reating__item" data-item-value="3">♥</div>
-                        <div className="reating__item" data-item-value="2">♥</div>
-                        <div className="reating__item" data-item-value="1">♥</div>
+                    <p className="movie__summary">{summary.slice(0, 200)}</p>
+                    <h5 className="movi__runtime"><i>{ runtime }</i>min</h5>
+                    <div className="all__rating">
+                        <div className="movie__rating">
+                            <div className="rating"><h2>{rating}</h2></div>
+                            <h3>Mega rating</h3>
+                        </div>
+                        <div className="reiting" data-total-value="0">
+                            <div className="reating__item" data-item-value="1">♥</div>
+                        </div>
                     </div>
+                    
                  
                 
                 </div>  

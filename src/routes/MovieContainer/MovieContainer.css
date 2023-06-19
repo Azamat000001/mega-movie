@@ -1,6 +1,6 @@
 .movies {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 50px;
     padding-top: 70px;
@@ -46,5 +46,11 @@
     100% {
         transform: rotate(360deg);
         transition: 0.4s all ease;
+    }
+}
+
+@media  screen and (max-width:810px ) {
+    .movies .movie {
+        width: 45%;
     }
 }

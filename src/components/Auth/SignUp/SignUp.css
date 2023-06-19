@@ -1,4 +1,4 @@
-.offerToRegistor {
+.offerToLogin {
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -10,8 +10,11 @@ h3 i a {
     color: darkorange;
 };
 
+form {
+    height: 100%;
+}
+
 .form{
-    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3) ) ;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -19,17 +22,19 @@ h3 i a {
     margin: 10%;
 }
 .sign-in-container{
-    margin-top: 100px;
-    height: 700px;
+    margin: 100px 0;
+    height: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: rgba(0,0,0,.7);
+    background: grey;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
 }
 .sign-in-container h1{
     margin: 30px 100px;
@@ -80,8 +85,23 @@ h3 i a {
  /* height: 100vh; */
  
 }
+
+.offerToLogin {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    margin: 25%; 
+}
+
 .php{
  text-align: center;
  color: #fff;
  font-size: large ;
+}
+
+@media screen and (max-width: 600px) {
+    .sign-in-container {
+        width: 300px;
+        margin: 200px 150px 300px 150px;
+    }
 }

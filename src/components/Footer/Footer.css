@@ -44,11 +44,12 @@ main {
 }
 
 .areas {
+    height: 70%;
     width: 100%;
     display: inline;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+
 }
 
 .left-area {

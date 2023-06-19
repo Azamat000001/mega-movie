@@ -1,22 +1,29 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./HomePage.css"
 
 function HomePage() {
     return (
         <div className="default_page">
+            
             <ul>
                 <li className="first_page">
-                    <h2>Добро пожаловать на наш сайт каталога фильмов!</h2> 
+                    <h1>Welcome to our Megamovie!</h1> 
+                    <div className="welcome">
+                        <p>register before you get access</p>
+                        <NavLink to='/SignIn'>Log in accaunt</NavLink>
+                    </div>
                     
                 </li>
                 <li className="second_page">
-                    <h2>Здесь вы найдете огромный выбор разнообразных кинолент - от классических хитов до современных блокбастеров.</h2>
+                    <p>Here you will find a huge selection of various films - from classic hits to modern blockbusters.</p>
+                    <p> We are sure that everyone here will find something to their liking. Your pleasant pastime with us is our main goal. </p>
                 </li>
-                <li className="three_page">
-                    <h2> Мы уверены, что каждый здесь найдет что-то по своему вкусу. Ваше приятное времяпрепровождение с нами - наша главная цель. </h2>
+                <li className="thrird_page">
+                    <p>Have a nice time!</p>
                 </li>
                 <li className="forteen_page">
-                    <h2>Приятного времяпрепровождение!</h2>
+                   
                 </li>
             </ul>
             
