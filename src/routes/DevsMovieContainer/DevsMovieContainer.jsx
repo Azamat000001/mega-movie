@@ -13,6 +13,13 @@ import DevsMovie from '../../components/DevsMovie/DevsMovie';
 
 const DevsMovieContainer = () => {
   const [ isLoading, setIsLoading ] = useState(false)
+  const [ isAdmin, setIsAdmin ] = useState(false)
+  const [ adminsCode, setAdminsCode ] = useState('315920it');
+  
+
+  const CheckAdminsCode = (value) => {
+   setIsAdmin(true)
+  }
 
   const [ newTitle, setNewTitle ] = useState("")
   const [ newYear, setNewYear] = useState(0)
@@ -54,74 +61,105 @@ const DevsMovieContainer = () => {
     }, [])
 
   return (
-    <div className="app">
-     <div>
-
-      <input 
-        placeholder="Title..." 
-        onChange={(e) => {
-          setNewTitle(e.target.value)
-        }}
-      />
-      <input 
-        type="number"
-        placeholder="Year..." 
-        onChange={(e) => {
-          setNewYear(e.target.value)
-        }}
-      />
-      <input  
-        placeholder="Summary..."
-        onChange={(e) => {
-          setNewSummary(e.target.value)
-        }}
-      />
-      <input  
-        placeholder="Genres..."
-        onChange={(e) => {
-          setNewGenres(e.target.value)
-        }}
-      />
-      <input 
-        type="number" 
-        placeholder="raiting..."
-        onChange={(e) => {
-          setNewRating(e.target.value)
-        }}
-      />
-      <input  
-        placeholder="Poster..."
-        onChange={(e) => {
-          setNewPoster(e.target.value)
-        }}
-      />
-      <button onClick={createMovie}>Create Movie</button>
-   </div>
-      {isLoading ? (
-        <div className="loader">
-          <div className="spinner"></div>
-        </div> 
-      ) : (
-        <div className="movie">
-          {movies.map((movie) => {
-            return (
-              <DevsMovie
-                id={movie.id}
-                poster={movie.poster} 
-                title={movie.title}
-                year={movie.year}
-                genres={movie.genres}
-                rating={movie.rating}
-                summary={movie.summary}
-                language={movie.language}
-                runtime={movie.runtime}
-              />
-            ); 
-          })}
+   <div className='dev-container'>
+    <div className='creater'>
+      { isAdmin ? (
+          <div className='creater_movie'>
+            <h1>Admin Panel</h1>
+            <h1>You can add movie</h1>
+            <input 
+                placeholder="Title..." 
+                onChange={(e) => {
+                setNewTitle(e.target.value)
+              }}
+            />
+            <input 
+                type="number"
+                placeholder="Year..." 
+                onChange={(e) => {
+                setNewYear(e.target.value)
+              }}
+            />
+            <input  
+                placeholder="Summary..."
+                onChange={(e) => {
+                setNewSummary(e.target.value)
+              }}
+            />
+            <input  
+                placeholder="Genres..."
+                onChange={(e) => {
+                setNewGenres(e.target.value)
+              }}
+            />
+            <input 
+              type="number" 
+              placeholder="raiting..."
+              onChange={(e) => {
+                setNewRating(e.target.value)
+              }}
+            />
+            <input  
+                placeholder="Poster..."
+                onChange={(e) => {
+                setNewPoster(e.target.value)
+              }}
+            />
+            <button onClick={createMovie}>Create Movie</button>
         </div>
-      )}
+      
+      ) : (
+        <div className='creator_movie'>
+          <h1>To stay Admin</h1>
+          <h1>Enter 12 digit code</h1>
+
+          <input
+            id="input"
+            type="password"
+            placeholder='Enter code :)'
+            onChange={(value) => {
+              CheckAdminsCode(value)
+            }}
+          />
+          <input
+            id="btn"
+            type="button"
+            placeholder='check code'
+
+          />
+          <button   onClick={setIsAdmin(true)}></button>
+        </div>
+      ) }
+    </div>
+    <div className="movies">
+     
+   
+        {isLoading ? (
+          <div className="loader">
+            <div className="spinner"></div>
+          </div> 
+        ) : (
+          <div className="movie">
+            {movies.map((movie) => {
+              return (
+                <DevsMovie
+                  id={movie.id}
+                  poster={movie.poster} 
+                  title={movie.title}
+                  year={movie.year}
+                  genres={movie.genres}
+                  rating={movie.rating}
+                  summary={movie.summary}
+                  language={movie.language}
+                  runtime={movie.runtime}
+                />
+              ); 
+            })}
+          </div>
+        )}
 
       
+      </div>
     </div>
   );
 }
@@ -131,11 +169,11 @@ export default DevsMovieContainer;
 
 
 
-// import { db } from '../../../firebase/firebase-config';
+{/* // import { db } from '../../../firebase/firebase-config';
 // import React, { useEffect, useState } from "react";
 // import "./SignUp.css"
-// import { 
-//         collection, 
+// import {  */}
+{/* //         collection, 
 //         getDocs, 
 //         addDoc, 
 //         updateDoc, 
@@ -148,8 +186,8 @@ export default DevsMovieContainer;
 
 
 
-// function SignUp () {
-//   const [ newName, setNewName ] = useState("")
+// function SignUp () { */}
+{/* //   const [ newName, setNewName ] = useState("")
 //   const [ newAge, setNewAge] = useState(0)
 //   const [ newPassword, setNewPassword ] = useState("")
 
@@ -159,9 +197,9 @@ export default DevsMovieContainer;
 
 //   const createUser = async () => {
 //     await addDoc(usersCollectionRef, { name: newName, password: newPassword, age: Number(newAge)  })
-//   } 
+//   }  */}
 
-//   const updateUser = async (id, age) => {
+{/* //   const updateUser = async (id, age) => {
 //     const userDoc = doc(db, 'users', id);
 //     const newFields = {age: age + 1};
 //     await updateDoc(userDoc, newFields);
@@ -235,4 +273,4 @@ export default DevsMovieContainer;
   
 // }
 
-// export default SignUp;
+// export default SignUp; */}

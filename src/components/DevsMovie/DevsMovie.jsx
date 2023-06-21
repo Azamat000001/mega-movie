@@ -36,11 +36,11 @@ const DevsMovie = ({ id, year, title, summary, poster, genres, rating, language,
               
              
               
-              <ul className="movie__genres">
+              {/* <ul className="movie__genres">
                   {genres.map((genres, index) => {
                       return <li key={index} >{genres.slice(0, 1)}</li>
                   })}
-              </ul>
+              </ul> */}
               <p className="movie__summary">{summary.slice(0, 200)}</p>
               <h5 className="movi__runtime"><i>{ runtime }</i>min</h5>
               <div className="all__rating">

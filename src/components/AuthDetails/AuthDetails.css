@@ -18,7 +18,7 @@
 
 .sign_in a {
     background-color: #fff;
-    color: rgb(99, 4, 99);
+    color: darkorange;
     border-radius: 12px;
     height: 30px;
     width: 50px;
@@ -29,7 +29,7 @@
 }
 
 .sign_up a {
-    background-color: rgb(99, 4, 99);
+    background-color: darkorange;
     color: #fff;
     border-radius: 12px;
     height: 30px;
