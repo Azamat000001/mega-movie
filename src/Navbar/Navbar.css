@@ -24,17 +24,18 @@
   }
 
   .item a:active {
-    color: grey;
-    font-size: 25px ;
+    color: #fff;
+    border-bottom: 2px solid darkorange;
   }
 
   .item a:hover {
-    color: grey;
-    font-size: 25px ;
+    color: #fff;
+    border-bottom: 2px solid darkorange;
   }
 
   header{
     height: 70px;
   }
+  
   
  

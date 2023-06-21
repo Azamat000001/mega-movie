@@ -34,11 +34,7 @@ function MovieContainer () {
     return (<div> 
             <section className="container">
               { isLoading ? (
-                <div className="loader">
-                  <div className="spinner">
-                    
-                  </div>
-                </div> 
+                null
                ) : (
                  <div className="movies">
                   
@@ -53,7 +49,6 @@ function MovieContainer () {
                       poster={movie.medium_cover_image}
                       genres={movie.genres}
                       rating={movie.rating}
-                      language={movie.language}
                       runtime={movie.runtime}
                     />
                     </div>

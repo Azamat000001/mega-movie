@@ -6,7 +6,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 // import SearchingMovie from "../../routes/SearchingMovie/SearchingMovie";
 
 
-const Movie = ({ key, year, title, summary, poster, genres, rating, language, runtime, ...props }) => {
+const Movie = ({ key, year, title, summary, poster, genres, rating, runtime, ...props }) => {
     const reitingItemList = document.querySelectorAll(".reating__item");
     const reitingItemArrey = Array.prototype.slice.call(reitingItemList);
 
@@ -25,7 +25,6 @@ const Movie = ({ key, year, title, summary, poster, genres, rating, language, ru
                     <h2 className="movie__title">{ title }</h2>
                     <div className="movie__about">
                         <p className="movie__year">{ year }</p>
-                        <p className="movie__language">{ language }</p>
                     </div>
                     
                    
@@ -65,7 +64,8 @@ Movie.propTypes = {
     title: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
     poster: PropTypes.string.isRequired,
-    genres: PropTypes.arrayOf(PropTypes.string).isRequired
+    genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+    language: PropTypes.string.isRequired
 };
 
 export default Movie;

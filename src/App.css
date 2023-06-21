@@ -1,18 +1,19 @@
+
+
 .content {
-    border-top: 1px solid #fff;
-    width: 70%;
-    margin: 0 auto;
-    height: auto;
-    min-height: 110vh;
-    background-color: #25242a;
+   
 }
 
 header {
+    position: fixed;
+    z-index: 3;
     height: 140px;
     width: 100%;
     background-color: var(--GeneralColor);
     border: 1px solid grey;
 }
+
+
 
 
 

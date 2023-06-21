@@ -8,6 +8,7 @@
 }
 
 .movies .movie {
+    margin-top: 50px;
     display: flex;
     width: 30%;
     background-color: white;

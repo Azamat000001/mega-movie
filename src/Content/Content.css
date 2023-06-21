@@ -1,0 +1,22 @@
+.content {
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    background-color: #25242a;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .content {
+        align-content: center;
+        min-height: 150vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        min-height: 150vh;
+    }
+  }
+
+

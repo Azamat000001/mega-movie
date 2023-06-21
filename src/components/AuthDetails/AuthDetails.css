@@ -1,15 +1,46 @@
 .signed_in {
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .signed_out {
-    color:#fff
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.sign_in a {
+    background-color: #fff;
+    color: rgb(99, 4, 99);
+    border-radius: 12px;
+    height: 30px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sign_up a {
+    background-color: rgb(99, 4, 99);
+    color: #fff;
+    border-radius: 12px;
+    height: 30px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
 
 button {
     height: 40px;

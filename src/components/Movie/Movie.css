@@ -77,14 +77,28 @@ img {
 }
 
 .all__rating {
-    width:100%;
+    width:90%;
     display: flex;
     flex-direction: row;
 }
 
+@media  screen and (max-width: 767px) {
+    .all__rating {
+        width: 130%;
+    }
+}
+
+
+
+@media screen and (max-width: 1199px) {
+    .all__rating {
+        width: 130%;
+    }
+}
+
 .movie .movie__rating {
     height: 40px;
-    width: 70%;
+    width: 90%;
     background-color:  rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     color: darkorange;
@@ -122,6 +136,9 @@ img {
     align-items: center;
     text-align: center;
     margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 

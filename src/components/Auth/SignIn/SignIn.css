@@ -2,7 +2,8 @@
     text-decoration: none;
     display: flex;
     flex-direction: row;
-    margin: 25%; 
+    margin-bottom: 25%;
+    margin-left: 25%;
 };
 
 h3 i a {
@@ -20,10 +21,12 @@ form {
     flex-direction: column;
     justify-content: center;
     margin: 10%;
+    margin-top: 40%;
+    height: 50%;
 }
 .sign-in-container{
-    margin: 100px 0;
-    height: 90%;
+
+    height: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -67,7 +70,8 @@ form {
     transition: .3s;
     background: darkorange;
     border-radius: 15px;
-    height: 38px;
+    height: 50px;
+    font-size: 17px;
     text-align: center;
     width: 20%;
     margin-right: 10px;
@@ -95,3 +99,27 @@ form {
         margin: 200px 150px 300px 150px;
     }
 }
+
+@media (min-width: 1024px) {
+  
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .sign-in-container {
+        margin: 0;
+    }
+  }
+  
+
+  @media (max-width: 767px) {
+    .sign-in-container {
+        height: 90%;
+        margin: 0 40%;
+        width: 90%;
+        margin-top: 30%;
+        margin-left: 34%;
+    }
+    button {
+        height: 50px;
+    }
+  }

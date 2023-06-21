@@ -6,12 +6,12 @@ function HomePage() {
     return (
         <div className="default_page">
             
-            <ul>
+            <ul className="all_pages">
                 <li className="first_page">
-                    <h1>Welcome to our Megamovie!</h1> 
+                    <h1 className="h1homepg">Welcome to our Megamovie!</h1> 
                     <div className="welcome">
                         <p>register before you get access</p>
-                        <NavLink to='/SignIn'>Log in accaunt</NavLink>
+                        <NavLink to='/SignIn'>Log in accaunt</NavLink>  
                     </div>
                     
                 </li>
@@ -22,9 +22,7 @@ function HomePage() {
                 <li className="thrird_page">
                     <p>Have a nice time!</p>
                 </li>
-                <li className="forteen_page">
-                   
-                </li>
+                
             </ul>
             
             

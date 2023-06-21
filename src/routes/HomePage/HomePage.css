@@ -18,20 +18,21 @@
 }
 
 li {
-    height: 100vh;
     /* color: rgb(255, 55, 0); */
     /* color: darkorange; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 
 .first_page  {
     background-image: url('https://object.pscloud.io/cms/cms/Uploads/image_9W34fz.png');
     background-position: center;
     margin: 0 auto;
     padding: 20%;
-    font-size: 35px;
+    font-size: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 80%;
 }
 
@@ -40,10 +41,11 @@ li {
 }
 
 .first_page h1 {
-    font-size: 50px;
+    font-size: 35px;
 }
 
 .welcome {
+    width: 100%;
     display: inline-block;
     color: #fff;
     background-color: #25242a;
@@ -63,6 +65,15 @@ li {
     border-radius: 15px;
 }
 
+.welcome a:hover {
+    text-align: center;
+    padding: 35px 0 ;
+    background: darkorange;
+    color: white;
+    border-radius: 15px;
+    font-size: 30px;
+}
+
 
 
 
@@ -76,6 +87,7 @@ li {
 .thrird_page {
     background-image: url('https://kino.24tv.ua/resources/photos/news/202303/2274944.jpg?v=1678903771000');
     padding: 20%;
+    margin: 0;
     font-size: 50px;
     background-repeat: no-repeat;
     background-position: center;
@@ -89,3 +101,20 @@ li{
     display: flex;
     justify-content: space-around;
 }
+.h1homepg{
+    text-size-adjust: 10%;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .first_page {
+        height: 100vh;
+        z-index: 2;
+    }
+    .welcome {
+        height: 20%;
+        text-align: center;
+    
+    }
+}
+

@@ -20,26 +20,37 @@ const DevsMovieContainer = () => {
   const [ newPoster, setNewPoster ] = useState("")
   const [ newSummary, setNewSummary ] = useState("")
   const [ newRating, setNewRating ] = useState(0)
+  const [ newRuntime, setNewRuntime ] = useState(0)
+  const [ newLanguage, setNewLanguage ] = useState('')
 
-  const [ devsMovies, setDevsMovies ] = useState([]);
-  const devsMoviesCollectionRef = collection(db, 'DevsMovies');
+  const [ movies, setMovies ] = useState([]);
+  const moviesCollectionRef = collection(db, 'movie');
 
-  console.log(collection(db, "DevsMovie"))
+  console.log(collection(db, "movies"))
 
-  const createDevsMovie = async () => {
-    await addDoc(devsMoviesCollectionRef, { title: newTitle, year: Number(newYear), genres: newGenres  })
+  const createMovie = async () => {
+    await addDoc(moviesCollectionRef, { title: newTitle, year: Number(newYear), runtime: Number(newRuntime), rating: Number(newRating), genres: newGenres, summary: newSummary, language: newLanguage  })
   } 
 
   
     useEffect(() => {
-      const getDevsMovies = async () => {
+      const getMovies = async () => {
         setIsLoading(true);
-        const data = await getDocs(devsMoviesCollectionRef);
-        setDevsMovies(devsMoviesCollectionRef.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        const data = await getDocs(moviesCollectionRef);
+        setMovies(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         setIsLoading(false)
       }
 
-      getDevsMovies()
+      getMovies()
+    }, [])
+
+    useEffect(() => {
+      const getMovies = async () => {
+        const data = await getDocs(moviesCollectionRef);
+        setMovies(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+      }
+
+      getMovies()
     }, [])
 
   return (
@@ -84,7 +95,7 @@ const DevsMovieContainer = () => {
           setNewPoster(e.target.value)
         }}
       />
-      <button onClick={createDevsMovie}>Create Movie</button>
+      <button onClick={createMovie}>Create Movie</button>
    </div>
       {isLoading ? (
         <div className="loader">
@@ -92,16 +103,18 @@ const DevsMovieContainer = () => {
         </div> 
       ) : (
         <div className="movie">
-          {devsMovies.map((devsMovie) => {
+          {movies.map((movie) => {
             return (
               <DevsMovie
-                id={devsMovie.id}
-                poster={devsMovie.poster} 
-                title={devsMovie.title}
-                year={devsMovie.year}
-                genres={devsMovie.genres}
-                rating={devsMovie.rating}
-                summary={devsMovie.summary}
+                id={movie.id}
+                poster={movie.poster} 
+                title={movie.title}
+                year={movie.year}
+                genres={movie.genres}
+                rating={movie.rating}
+                summary={movie.summary}
+                language={movie.language}
+                runtime={movie.runtime}
               />
             ); 
           })}
@@ -114,6 +127,8 @@ const DevsMovieContainer = () => {
 }
 
 export default DevsMovieContainer;
+
+
 
 
 // import { db } from '../../../firebase/firebase-config';
