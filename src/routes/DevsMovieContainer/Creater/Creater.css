@@ -1,0 +1,97 @@
+.creater {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.creater_movie {
+    height: 80%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0, 0.7);
+    border: 2px solid grey;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.creater_movie h1 {
+    margin: 30px 100px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 15px 40px;
+    text-align: center;
+}
+
+.creater_movie input {
+    padding: 10px;
+    width: 90%;
+    color: #fff;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 40px;
+}
+
+.creater_movie button {
+    
+    color: #fff;
+    border: none;
+    transition: .3s;
+    background: darkorange;
+    border-radius: 15px;
+    height: 50px;
+    font-size: 17px;
+    text-align: center;
+    width: 20%;
+    
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .creater_movie  {
+        width: 300px;
+        margin: 200px 150px 300px 150px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .creater_movie {
+        /* margin: 0 300px; */
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .creater_movie  {
+        margin: 0;
+    }
+  }
+  
+
+  @media (max-width: 767px) {
+    .creater_movie  {
+        height: 90%;
+        /* margin: 30% 40%; */
+        width: 90%;
+        margin-top: 10%;
+        margin-right: 40%;
+        margin-left: 40%;
+    }
+    button {
+        height: 50px;
+    }
+  }

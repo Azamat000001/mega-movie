@@ -10,6 +10,7 @@ import {
         doc 
 } from 'firebase/firestore'
 import DevsMovie from '../../components/DevsMovie/DevsMovie';
+import Creater from './Creater/Creater';
 
 const DevsMovieContainer = () => {
   const [ isLoading, setIsLoading ] = useState(false)
@@ -33,7 +34,7 @@ const DevsMovieContainer = () => {
   const [ movies, setMovies ] = useState([]);
   const moviesCollectionRef = collection(db, 'movie');
 
-  console.log(collection(db, "movies"))
+  console.log(collection(db, "movie"))
 
   const createMovie = async () => {
     await addDoc(moviesCollectionRef, { title: newTitle, year: Number(newYear), runtime: Number(newRuntime), rating: Number(newRating), genres: newGenres, summary: newSummary, language: newLanguage  })
@@ -61,106 +62,45 @@ const DevsMovieContainer = () => {
     }, [])
 
   return (
-   <div className='dev-container'>
-    <div className='creater'>
-      { isAdmin ? (
-          <div className='creater_movie'>
-            <h1>Admin Panel</h1>
-            <h1>You can add movie</h1>
-            <input 
-                placeholder="Title..." 
-                onChange={(e) => {
-                setNewTitle(e.target.value)
-              }}
-            />
-            <input 
-                type="number"
-                placeholder="Year..." 
-                onChange={(e) => {
-                setNewYear(e.target.value)
-              }}
-            />
-            <input  
-                placeholder="Summary..."
-                onChange={(e) => {
-                setNewSummary(e.target.value)
-              }}
-            />
-            <input  
-                placeholder="Genres..."
-                onChange={(e) => {
-                setNewGenres(e.target.value)
-              }}
-            />
-            <input 
-              type="number" 
-              placeholder="raiting..."
-              onChange={(e) => {
-                setNewRating(e.target.value)
-              }}
-            />
-            <input  
-                placeholder="Poster..."
-                onChange={(e) => {
-                setNewPoster(e.target.value)
-              }}
-            />
-            <button onClick={createMovie}>Create Movie</button>
-        </div>
-      
-      ) : (
-        <div className='creator_movie'>
-          <h1>To stay Admin</h1>
-          <h1>Enter 12 digit code</h1>
-
-          <input
-            id="input"
-            type="password"
-            placeholder='Enter code :)'
-            onChange={(value) => {
-              CheckAdminsCode(value)
-            }}
+    
+      <div className='dev-container'>
+          <Creater
+            setNewTitle={setNewTitle}
+            setNewYear={setNewYear}
+            setNewSummary={setNewSummary} 
+            setNewGenres={setNewGenres} 
+            setNewRating={setNewRating} 
+            setNewRuntime={setNewRuntime} 
+            setNewPoster={setNewPoster} 
+            createMovie={createMovie} 
+            CheckAdminsCode={CheckAdminsCode}
           />
-          <input
-            id="btn"
-            type="button"
-            placeholder='check code'
-
-          />
-          <button   onClick={setIsAdmin(true)}></button>
+          {isLoading ? (
+                <div className="loader">
+                  <div className="spinner"></div>
+                </div> 
+              ) : (
+                <div className="movies">
+                  {movies.map((movie) => (
+                    <div className="movie">
+                      
+                        <DevsMovie
+                          id={movie.id}
+                          poster={movie.poster} 
+                          title={movie.title}
+                          year={movie.year}
+                          genres={movie.genres}
+                          rating={movie.rating}
+                          summary={movie.summary}
+                          language={movie.language}
+                          runtime={movie.runtime}
+                        />
+                      
+                    </div> 
+                ))}
+              </div>
+            )}
         </div>
-      ) }
-    </div>
-    <div className="movies">
-     
-   
-        {isLoading ? (
-          <div className="loader">
-            <div className="spinner"></div>
-          </div> 
-        ) : (
-          <div className="movie">
-            {movies.map((movie) => {
-              return (
-                <DevsMovie
-                  id={movie.id}
-                  poster={movie.poster} 
-                  title={movie.title}
-                  year={movie.year}
-                  genres={movie.genres}
-                  rating={movie.rating}
-                  summary={movie.summary}
-                  language={movie.language}
-                  runtime={movie.runtime}
-                />
-              ); 
-            })}
-          </div>
-        )}
-
-      
-      </div>
-    </div>
   );
 }
 

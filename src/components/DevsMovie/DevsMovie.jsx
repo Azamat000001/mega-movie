@@ -11,8 +11,8 @@ import {
 } from 'firebase/firestore'
 import { db } from '../../firebase/firebase_config';
 
-const DevsMovie = ({ id, year, title, summary, poster, genres, rating, language, runtime, ...props }) => {
-
+const DevsMovie = ({ id, year, title, summary, poster, genres, rating, runtime, ...props }) => {
+   
     const deleteDevsMovie = async (id) => {
         const movieDoc = doc(db, 'movie', id);
         await deleteDoc(movieDoc);
@@ -31,13 +31,12 @@ const DevsMovie = ({ id, year, title, summary, poster, genres, rating, language,
               <h2 className="movie__title">{ title }</h2>
               <div className="movie__about">
                   <p className="movie__year">{ year }</p>
-                  <p className="movie__language">{ language }</p>
               </div>
               
              
               
               {/* <ul className="movie__genres">
-                  {genres.map((genres, index) => {
+                  {genres.map((genre, index) => {
                       return <li key={index} >{genres.slice(0, 1)}</li>
                   })}
               </ul> */}
@@ -82,4 +81,4 @@ DevsMovie.propTypes = {
     language: PropTypes.string.isRequired
 };
 
-export default DevsMovie
+export default DevsMovie;
