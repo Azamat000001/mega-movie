@@ -16,6 +16,11 @@
     border-radius: 10px;    
     margin: 10px;                                
   }
+
+  .item-c {
+    display: flex;
+    flex-direction: row;
+  }
   
   .item a {
     color: darkorange;

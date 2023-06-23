@@ -22,6 +22,7 @@ const Footer = () => {
                         <ul className="box">
                             <li><NavLink to="home">Home</NavLink></li>
                             <li><NavLink to="/movies">films</NavLink></li>
+                            <li><NavLink to="/recommendMovies" >Comuniti</NavLink></li>
                             <li><NavLink to="/SignIn">Sign In</NavLink></li>
                             <li><NavLink to="/SignUp">Sign Up</NavLink></li>
                         </ul>

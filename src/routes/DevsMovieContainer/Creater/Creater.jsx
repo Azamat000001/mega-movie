@@ -7,8 +7,8 @@ const Creater = ({setNewTitle, setNewYear, setNewSummary, setNewGenres, setNewRa
     <div className='creater'>
             { isAdmin ? (
                 <div className=' creater_movie'>
-                  <h1>Admin Panel</h1>
-                  <h1>You can add movie</h1>
+                  <h1>you can recommend movies to other users</h1>
+                  <h1>to other users</h1>
                   <input 
                       placeholder="Title..." 
                       onChange={(e) => {
@@ -26,12 +26,6 @@ const Creater = ({setNewTitle, setNewYear, setNewSummary, setNewGenres, setNewRa
                       placeholder="Summary..."
                       onChange={(e) => {
                       setNewSummary(e.target.value)
-                    }}
-                  />
-                  <input  
-                      placeholder="Genres..."
-                      onChange={(e) => {
-                      setNewGenres(e.target.value)
                     }}
                   />
                   <input 

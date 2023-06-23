@@ -14,7 +14,7 @@ import { db } from '../../firebase/firebase_config';
 const DevsMovie = ({ id, year, title, summary, poster, genres, rating, runtime, ...props }) => {
    
     const deleteDevsMovie = async (id) => {
-        const movieDoc = doc(db, 'movie', id);
+        const movieDoc = doc(db, 'movie', Number(id));
         await deleteDoc(movieDoc);
     }
 
@@ -52,11 +52,11 @@ const DevsMovie = ({ id, year, title, summary, poster, genres, rating, runtime, 
                   </div>
               </div>
 
-              <button 
+              {/* <button 
                 onClick={() => {
                     deleteDevsMovie(id)
                 }}
-              >Delete Movie</button>
+              >Delete Movie</button> */}
               
            
           

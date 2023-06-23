@@ -11,17 +11,22 @@ import {
 } from 'firebase/firestore'
 import DevsMovie from '../../components/DevsMovie/DevsMovie';
 import Creater from './Creater/Creater';
+import { onAuthStateChanged, signOut, } from "firebase/auth";
+import { auth } from "../../firebase/firebase_config";
+
 
 const DevsMovieContainer = () => {
   const [ isLoading, setIsLoading ] = useState(false)
   const [ isAdmin, setIsAdmin ] = useState(false)
   const [ adminsCode, setAdminsCode ] = useState('315920it');
+  const [authUser, setAuthUser] = useState(null);
   
 
   const CheckAdminsCode = (value) => {
    setIsAdmin(true)
   }
-
+  
+  const [newId, setNewId ] = useState(0)
   const [ newTitle, setNewTitle ] = useState("")
   const [ newYear, setNewYear] = useState(0)
   const [ newGenres, setNewGenres ] = useState("")
@@ -37,8 +42,18 @@ const DevsMovieContainer = () => {
   console.log(collection(db, "movie"))
 
   const createMovie = async () => {
-    await addDoc(moviesCollectionRef, { title: newTitle, year: Number(newYear), runtime: Number(newRuntime), rating: Number(newRating), genres: newGenres, summary: newSummary, language: newLanguage  })
+    await addDoc(moviesCollectionRef, { id: Number(newId), title: newTitle, year: Number(newYear), runtime: Number(newRuntime), rating: Number(newRating), genres: newGenres, summary: newSummary, language: newLanguage  })
   } 
+
+
+
+const userSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("sign out successful");
+    })
+      .catch((error) => console.log(error));
+};
 
   
     useEffect(() => {
@@ -49,22 +64,27 @@ const DevsMovieContainer = () => {
         setIsLoading(false)
       }
 
-      getMovies()
-    }, [])
+      const listen = onAuthStateChanged(auth, (user) => {
+        if (user) {
+          setAuthUser(user);
+        } else {
+          setAuthUser(null);
+        }
+      });
 
-    useEffect(() => {
-      const getMovies = async () => {
-        const data = await getDocs(moviesCollectionRef);
-        setMovies(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+      getMovies();
+      return () => {
+        listen()
       }
-
-      getMovies()
     }, [])
+
 
   return (
-    
-      <div className='dev-container'>
-          <Creater
+    <div>
+      { authUser ? (
+         <div className='dev-container'>
+        
+            <Creater
             setNewTitle={setNewTitle}
             setNewYear={setNewYear}
             setNewSummary={setNewSummary} 
@@ -100,7 +120,14 @@ const DevsMovieContainer = () => {
                 ))}
               </div>
             )}
+        
+          
         </div>
+        ) : (
+          <div className="checkAuth"><h1>register before you get access</h1></div>
+        )}
+    </div>
+     
   );
 }
 

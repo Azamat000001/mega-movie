@@ -49,7 +49,10 @@ function Navbar() {
 
                 <div className="item"><NavLink to="/home" >Home</NavLink></div>
                 { authUser ? (
+                      <div className="item-c">
                         <div className="item"><NavLink to="movies" >Films</NavLink></div>
+                      </div>
+                        
                     ) : (
                         null
                     )

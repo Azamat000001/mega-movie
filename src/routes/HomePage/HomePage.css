@@ -1,6 +1,8 @@
 
  
-
+.all_pages {
+    width: 100%;
+}
 
 .default_page {
     height: 100%;
@@ -27,7 +29,6 @@ li {
 .first_page  {
     background-image: url('https://object.pscloud.io/cms/cms/Uploads/image_9W34fz.png');
     background-position: center;
-    margin: 0 auto;
     padding: 20%;
     font-size: 30px;
     display: flex;

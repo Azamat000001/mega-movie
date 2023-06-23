@@ -1,3 +1,17 @@
+.checkAuth {
+    /* top: 55%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .movies {
     display: flex;
     justify-content: space-around;
