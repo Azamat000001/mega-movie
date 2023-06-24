@@ -49,6 +49,8 @@ const Creater = ({setNewTitle, setNewYear, setNewSummary, setNewGenres, setNewRa
                     }}
                   />
                   <button onClick={createMovie}>Create Movie</button>
+                  <p>Recommend your favorite movies to other users</p>
+                  <p>after creating the movie, refresh the page</p>
               </div>
             
             ) : (

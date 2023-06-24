@@ -33,6 +33,18 @@
     text-align: center;
 }
 
+.creater_movie p {
+    margin: 30px 100px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 15px 40px;
+    text-align: center;
+}
+
+
 .creater_movie input {
     padding: 10px;
     width: 90%;
