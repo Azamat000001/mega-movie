@@ -25,10 +25,9 @@ form {
     height: 50%;
 }
 .sign-in-container{
-
     height: 70%;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: rgba(0,0,0, 0.7);

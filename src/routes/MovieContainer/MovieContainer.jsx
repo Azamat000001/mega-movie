@@ -9,6 +9,7 @@ import { auth } from "../../firebase/firebase_config";
 
 import Movie from "../../components/Movie/Movie";
 import "./MovieContainer.css";
+import DevsMovieContainer from "../DevsMovieContainer/DevsMovieContainer";
 
 
 
@@ -58,9 +59,12 @@ const userSignOut = () => {
     
     return (<div> 
               { authUser ? (
+          
                 <section className="container">
                   { isLoading ? (
-                    null
+                    <div className="loader">
+                      <div className="spinner"></div>
+                    </div>
                   ) : (
                     <div className="movies">
                       
@@ -81,15 +85,17 @@ const userSignOut = () => {
                         
                             
                       ))}
-                      <div className="item"><NavLink to="/recommendMovies" >Comuniti</NavLink></div>
+                      
                     </div>
                   )}
-              
+                
                 </section>
+                
+             
               ) : (
                 <div className="checkAuth"><h1>register before you get access</h1></div>
               )}
-                
+                 
             </div>
           );
   }

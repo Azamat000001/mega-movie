@@ -17,8 +17,6 @@ import {
 
 function Navbar() {
         const [authUser, setAuthUser] = useState(null);
-        const [ modalActive, setModalActive ] = useState(true)
-        const [ isOpenSign, setIsOpenSign ] = useState()
 
         useEffect(() => {
                 const listen = onAuthStateChanged(auth, (user) => {
@@ -41,7 +39,7 @@ function Navbar() {
                 })
                   .catch((error) => console.log(error));
         };
-
+        
         return (
         <nav className="nav">
                 
@@ -51,6 +49,7 @@ function Navbar() {
                 { authUser ? (
                       <div className="item-c">
                         <div className="item"><NavLink to="movies" >Films</NavLink></div>
+                        <div className="item"><NavLink to="/recommendMovies" >Comuniti</NavLink></div>
                       </div>
                         
                     ) : (

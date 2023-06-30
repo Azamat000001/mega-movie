@@ -9,6 +9,7 @@ import React, { useState } from "react";
 import { images } from "./assets/images.jpeg"
 import Footer from "./Footer/Footer";
 import Content from "./Content/Content";
+import AuthDetails from "./components/AuthDetails/AuthDetails";
 
 
 
@@ -21,14 +22,12 @@ import Content from "./Content/Content";
 function App () {
  
   const [ modalActive, setModalActive ] = useState(true)
-
+ 
   return (
     <div className="app">
       
-        <header>
-          <Navbar/>
-          
-        </header>
+       
+        <Navbar/>
         <Content/>
         <Footer/>
         

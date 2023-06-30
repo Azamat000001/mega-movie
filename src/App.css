@@ -2,14 +2,14 @@
 
 
 
-header {
-    position: fixed;
-    z-index: 3;
-    height: 140px;
-    width: 100%;
-    background-color: var(--GeneralColor);
-    border: 1px solid grey;
-}
+/* header {
+    /* position: fixed; */
+    /* z-index: 3; */
+    /* height: 140px; */
+    /* width: 100%; */
+    /* background-color: var(--GeneralColor); */
+    /* border: 1px solid grey; */
+/* } */
 
 
 
